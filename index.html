@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Survey Form</h1>
+      <hr />
+      <p id="description">How many books do you read a year?</p>
+      <div class="survey-form">
+        <form id="survey-form">
+          <div class="row">
+            <div class="col-left">
+              <label id="name-label" for="name">Name</label>
+            </div>
+            <div class="col-right">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <span class="validity"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-left">
+              <label id="email-label" for="email">Email</label>
+            </div>
+            <div class="col-right">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <span class="validity"></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-left">
+              <label id="number-label" for="number">Age</label>
+            </div>
+            <div class="col-right">
+              <input
+                id="number"
+                type="number"
+                name="number"
+                min="9"
+                max="100"
+                placeholder="0"
+                value="0"
+              />
+              <span class="validity"></span>
+            </div>
+          </div>
+          <!--radio buttons-->
+          <div class="row">
+            <div class="col-left">
+              <label for="gender" id="gender-desc"
+                >Please select your gender:</label
+              >
+            </div>
+            <div class="col-right">
+              <input
+                id="gender"
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+              />
+              <label for="gender">Female</label>
+              <br />
+              <input
+                id="gender"
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+              />
+              <label for="gender">Male</label>
+              <br />
+              <input
+                id="gender"
+                type="radio"
+                id="other"
+                name="gender"
+                value="other"
+              />
+              <label for="gender">Other</label>
+            </div>
+          </div>
+          <!--dropdown-->
+          <div class="row">
+            <div class="col-left">
+              <label for="dropdown">How many books do you read per year:</label>
+            </div>
+            <div class="col-right">
+              <select id="dropdown" value="dropdown">
+                <option value="Item_1">0 - 1</option>
+                <option value="Item_2">2 - 3</option>
+                <option value="Item_3">4 - 6</option>
+                <option value="Item_3">6 or more</option>
+              </select>
+            </div>
+          </div>
+          <!--checkbox-->
+          <div class="row">
+            <div class="col-left">
+              <label for="checkbox">Which form of books do you prefer?</label>
+            </div>
+            <div class="col-right">
+              <input
+                id="checkbox"
+                type="checkbox"
+                name="features"
+                value="item1"
+              />
+              <label for="checkbox"> E-books</label>
+              <br />
+              <input
+                id="checkbox"
+                type="checkbox"
+                name="features"
+                value="item2"
+              />
+              <label for="checkbox">Paperback</label>
+            </div>
+          </div>
+          <!--textarea-->
+          <div class="row">
+            <div class="col-left">
+              <label for="textarea">Write a comment...</label>
+            </div>
+            <div class="col-right textarea-col">
+              <textarea
+                id="textarea"
+                name="textarea"
+                rows="5"
+                cols="50"
+              ></textarea>
+            </div>
+          </div>
+          <!--submit button-->
+          <div class="row">
+            <div class="col-button">
+              <input id="submit" type="submit" value="Send" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <svg
+        class="wave"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 250"
+      >
+        <path
+          fill="#00cba9"
+          fill-opacity="1"
+          d="M0,288L0,64L62.6,64L62.6,64L125.2,64L125.2,224L187.8,224L187.8,64L250.4,64L250.4,128L313,128L313,96L375.7,96L375.7,224L438.3,224L438.3,256L500.9,256L500.9,192L563.5,192L563.5,96L626.1,96L626.1,288L688.7,288L688.7,192L751.3,192L751.3,96L813.9,96L813.9,64L876.5,64L876.5,128L939.1,128L939.1,256L1001.7,256L1001.7,32L1064.3,32L1064.3,224L1127,224L1127,192L1189.6,192L1189.6,96L1252.2,96L1252.2,128L1314.8,128L1314.8,96L1377.4,96L1377.4,96L1440,96L1440,320L1377.4,320L1377.4,320L1314.8,320L1314.8,320L1252.2,320L1252.2,320L1189.6,320L1189.6,320L1127,320L1127,320L1064.3,320L1064.3,320L1001.7,320L1001.7,320L939.1,320L939.1,320L876.5,320L876.5,320L813.9,320L813.9,320L751.3,320L751.3,320L688.7,320L688.7,320L626.1,320L626.1,320L563.5,320L563.5,320L500.9,320L500.9,320L438.3,320L438.3,320L375.7,320L375.7,320L313,320L313,320L250.4,320L250.4,320L187.8,320L187.8,320L125.2,320L125.2,320L62.6,320L62.6,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </body>
+</html>

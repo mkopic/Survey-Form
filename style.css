@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  line-height: 1.6;
+  z-index: 1;
+}
+.wave {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+#title {
+  margin-left: 10%;
+  color: hsl(180, 85%, 35%);
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+hr {
+  width: 80%;
+  margin: auto;
+  color: hsl(180, 20%, 35%);
+  border: 0.5px solid hsl(180, 20%, 35%);
+}
+#description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.survey-form {
+  width: 60%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 3px hsl(180, 20%, 35%);
+  background: linear-gradient(180deg, transparent 40%, hsl(180, 85%, 35%));
+  z-index: 2;
+}
+/*----- Position Input Fields-----*/
+.row {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.col-left {
+  flex-basis: 25%;
+  margin-left: 2rem;
+}
+.col-right {
+  flex-basis: 70%;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/*----- Styling Input Fields -----*/
+input {
+  width: 80%;
+  margin: 0.625rem 0;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  border: none;
+  border-bottom: 2px solid hsl(180, 20%, 35%);
+}
+input:focus {
+  background-color: hsl(180, 90%, 95%);
+  border-radius: 0.3rem;
+  border: none;
+}
+#number {
+  max-width: 5rem;
+  text-align: center;
+  height: 2.5rem;
+  border: 2px solid hsl(180, 20%, 35%);
+}
+/*----- remove spin button -----*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*----- validity -----*/
+
+input:invalid + .validity:after {
+  content: "*";
+  color: red;
+  float: inherit;
+  margin: 1.25rem 0;
+}
+input:valid + .validity:after {
+  content: "*";
+  color: green;
+  float: inherit;
+  margin: 1.25rem 0;
+}
+
+#gender {
+  width: 2rem;
+  cursor: pointer;
+}
+#gender:hover {
+  border: 2px solid hsl(180, 20%, 35%);
+  transform: scale(1.1);
+}
+
+/*----- dropdown ----- */
+#dropdown {
+  width: 9.375rem;
+  height: 2.5rem;
+  margin: 0.0625px 0;
+  border: 0.5px solid hsl(180, 20%, 35%);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+/*----- checkbox ----- */
+
+#checkbox {
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+/*----- textarea-----*/
+.textarea-col {
+  max-width: 60rem;
+  height: 100%;
+  text-align: top;
+}
+#textarea {
+  width: 100%;
+  height: 100%;
+
+  margin: 0.75rem 0;
+  text-align: top;
+  resize: none;
+}
+
+/*----- submit button -----*/
+.col-button {
+  flex-basis: 100%;
+}
+#submit {
+  width: 7rem;
+  float: right;
+  margin-right: 5px;
+  font-size: 1rem;
+  border: 2px solid hsl(180, 85%, 35%);
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+}
+#submit:hover {
+  color: #fff;
+  background: linear-gradient(-180deg, transparent 20%, hsl(180, 85%, 35%));
+  border: 2px solid hsl(180, 85%, 35%);
+}
+/*----- media -----*/
+
+@media screen and (max-width: 600px) {
+  .survey-form {
+    width: 80%;
+  }
+  .row {
+    width: 100%;
+    flex-direction: column;
+  }
+  .col-left {
+    flex-basis: 100%;
+    margin: auto;
+  }
+  .col-right {
+    flex-basis: 100%;
+  }
+}
